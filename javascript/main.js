@@ -5,7 +5,8 @@ const numberInput1 = document.querySelector('#numberInput1')
 const numberInput2 = document.querySelector('#numberInput2')
 const numsBtn = document.querySelector('#numbersBtn')
 const outTwo = document.querySelector('#out2')
-
+const esnumero = document.querySelector('#esnumero')
+const iniciarBtn = document.querySelector('#iniciarBtn')
 
 
 numBtn.addEventListener('click', (e) => {
@@ -36,3 +37,24 @@ numsBtn.addEventListener('click', (e) => {
   i++;
   }
 })
+
+
+let numbers = [];
+
+iniciarBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.clear();
+  esnumero.addEventListener('keyup', (e) => {
+    if (!isNaN(esnumero.value)) {
+      numbers.push(Number(esnumero.value));
+      console.log(numbers)
+    }
+  })
+})
+
+
+
+
+
+
+
