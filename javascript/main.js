@@ -43,13 +43,14 @@ let numbers = [];
 
 iniciarBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  console.clear();
-  esnumero.addEventListener('keyup', (e) => {
-    if (!isNaN(esnumero.value)) {
-      numbers.push(Number(esnumero.value));
-      console.log(numbers)
-    }
-  })
+  while (Number(esnumero.value) != 0){
+    esnumero.addEventListener('keyup', (e) => {
+      if (!isNaN(esnumero.value)){
+        numbers.push(Number(esnumero.value))
+        console.log(numbers)
+      }
+    })
+  }
 })
 
 
